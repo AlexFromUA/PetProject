@@ -1,0 +1,12 @@
+﻿/.idea/.idea.Corporation/.idea/.gitignore
+/.idea/.idea.Corporation/.idea/.name
+/.idea/.idea.Corporation/.idea/dataSources.xml
+/.idea/.idea.Corporation/.idea/encodings.xml
+/.idea/.idea.Corporation/.idea/indexLayout.xml
+/.idea/.idea.Corporation/.idea/vcs.xml
+/.idea/.idea.Test/.idea/workspace.xml
+/.vscode/
+/.fleet/
+bin/
+obj/
+appsettings.Development.json

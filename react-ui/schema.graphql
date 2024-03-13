@@ -1,0 +1,28 @@
+type Query {
+  employee(id: Decimal!): EmployeeModel!
+  employees: [EmployeeModel!]!
+}
+
+"""
+The built-in `Decimal` scalar type.
+"""
+scalar Decimal
+
+type EmployeeModel {
+  employeeID: Decimal!
+  departmentId: UUID!
+  surName: String!
+  firstName: String!
+  patronymic: String
+  dateOfBirth: DateTime!
+  docSeries: String
+  docNumber: String
+  position: String!
+}
+
+"""
+The `DateTime` scalar represents an ISO-8601 compliant date time type.
+"""
+scalar DateTime @specifiedBy(url: "https://www.graphql-scalars.com/date-time")
+
+scalar UUID @specifiedBy(url: "https://tools.ietf.org/html/rfc4122")
