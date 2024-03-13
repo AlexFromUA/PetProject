@@ -18,7 +18,9 @@ builder.Services.AddDbContext<ApplicationDbContext>();
 builder.Services
 	.AddGraphQLServer()
 	.RegisterDbContext<ApplicationDbContext>()
-	.AddQueryType<Query>();
+	.AddQueryType(q => q.Name("Query"))
+	.AddType<DepartmentQuery>()
+	.AddType<EmployeeQuery>();
 
 var app = builder.Build();
 

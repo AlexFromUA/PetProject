@@ -2,7 +2,8 @@
 
 namespace Corporation;
 
-public class Query
+[ExtendObjectType("Query")]
+public class EmployeeQuery
 {
 	public EmployeeModel GetEmployee(ApplicationDbContext dbContext, decimal id)
 	{
@@ -19,12 +20,12 @@ public class Query
 
 	public List<EmployeeModel> GetEmployees(ApplicationDbContext dbContext)
 	{
-		List<EmployeeModel> employee;
-		employee = dbContext.Employees.ToList();
+		List<EmployeeModel> employees;
+		employees = dbContext.Employees.ToList();
 
-		if (employee != null)
+		if (employees != null)
 		{
-			return employee;
+			return employees;
 		}
 
 		return null;

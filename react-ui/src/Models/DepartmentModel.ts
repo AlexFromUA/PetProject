@@ -1,6 +1,6 @@
-export interface IDepartment{
+export interface IDepartment {
 
-    DepartmentId: number,
-    
-    DepartmentName: string
+	departmentID: string,
+
+	departmentName: string
 }

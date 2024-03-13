@@ -1,21 +1,14 @@
-import { useParams } from "react-router-dom";
-import { useState } from "react";
-import { GetDepartmentById, UpdateDepartment } from "../Services/DepartmentService";
-import Employee from "../Employees/Employee";
+import {useParams} from "react-router-dom";
+import {GetDepartment} from "../Queries/Department/DepartmentDetails";
 
-export default function DepartmentDetails(){
-    let { depId } = useParams();
-    const[department, setDepartment] = useState(GetDepartmentById(parseInt(depId!)));
-    return(
-        <div className='departmentsDetails'>
-            Department name: 
-            <input value={department.DepartmentName} onChange={e => setDepartment({...department, DepartmentName: e.target.value})} /><br/>
-            <h3>Employees of department:</h3>
-            {department.EmployeesOfDepartment.map(e => {
-                return Employee(e);
-            })};
-            
-            <button onClick={e => UpdateDepartment(department)}>Update</button>
-        </div>
-        )
+export default function DepartmentDetails() {
+	let {depId} = useParams();
+	let depDetails = GetDepartment(depId!);
+	return (
+		<div className='departmentsDetails'>
+			<h3>Department details</h3>
+			Department ID: {depDetails.departmentID}<br/>
+			Department name: {depDetails.departmentName}<br/>
+		</div>
+	)
 }

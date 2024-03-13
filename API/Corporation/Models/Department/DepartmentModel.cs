@@ -1,12 +1,17 @@
-﻿namespace Corporation.Models;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
 
+namespace Corporation.Models;
+
+[Table("Department")]
+[PrimaryKey("DepartmentID")]
 public class DepartmentModel
 {
-    public Guid Id { get; set; }
-    
-    public Guid? ParentDepartmentId { get; set; }
-    
-    public string? Code { get; set; }
-    
-    public string Name { get; set; }
+	[Column("ID")] public Guid DepartmentID { get; set; }
+
+	public Guid? ParentDepartmentId { get; set; }
+
+	public string? Code { get; set; }
+
+	[Column("Name")] public string DepartmentName { get; set; }
 }

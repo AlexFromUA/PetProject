@@ -57,15 +57,15 @@ public class DepartmentBaseService : BaseService, IDepartmentService
 
 	public async Task<DepartmentModel> GetDepartment(Guid departmentId)
 	{
-		DepartmentModel department = null;
+/*		DepartmentModel department = null;
 
 		if (_departments == null)
 		{
 			await GetDepartments();
 		}
 
-		department = _departments.SingleOrDefault(e => e.Id == departmentId);
+		department = _departments.SingleOrDefault(e => e.Id == departmentId);*/
 
-		return department;
+		return null;
 	}
 }

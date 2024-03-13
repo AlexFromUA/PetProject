@@ -1,9 +1,9 @@
 import {configureStore} from "@reduxjs/toolkit";
-import departmentReducer from "./Slicers/DepartmentSlicer";
+//import departmentReducer from "./Slicers/DepartmentSlicer";
 
 export const store = configureStore({
     reducer: {
-        departments: departmentReducer}
+        /*departments: departmentReducer*/}
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

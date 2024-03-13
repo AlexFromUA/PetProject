@@ -48,9 +48,9 @@ const root = ReactDOM.createRoot(
 root.render(
 	<RelayEnvironmentProvider environment={RelayEnvironment}>
 		<Suspense fallback={'Loading...'}>
-			<Provider store={store}>
+			{/*<Provider store={store}>*/}
 				<Router.RouterProvider router={routes}/>
-			</Provider>
+			{/*</Provider>*/}
 		</Suspense>
 	</RelayEnvironmentProvider>
 );
